@@ -1,0 +1,189 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  width:100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:30px;
+}
+
+.title {
+  font-family: "monospace";
+  font-size:45px;
+  margin-bottom:20px;
+}
+
+.guess_body_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:50px;
+}
+
+.guess_body_container > .guess_body_underline {
+  width:300px;
+  height:8px;
+  background-color: black;
+}
+
+.guess_body_container > .guess_body_line {
+  width:8px;
+  height:300px;
+  background-color: black;
+}
+
+.guess_body_container > .guess_body_holder {position: relative; }
+
+.guess_body_container > .guess_body_holder > .guess_body_straight {
+  width:225px;
+  height:8px;
+  background-color: black;
+  margin-left:217px;
+}
+
+.guess_body_container > .guess_body_holder > .guess_body_down {
+  position: absolute;
+  right:0;
+  height:50px;
+  width:8px;
+  background-color: black;
+}
+
+.guess_body_container > .guess_body_holder > .guess_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right:-25px;
+  top:50px;
+}
+
+.guess_body_container > .guess_body_holder > .guess_body > .guess_body_head {
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:7px solid black;
+  display: none;
+}
+
+.guess_body_container > .guess_body_holder > .guess_body > .guess_body_torso {
+  width:9px;
+  height:60px;
+  background-color: black;
+  display: none;
+}
+
+.guess_body_container > .guess_body_holder > .guess_body > .guess_body_legs {
+  display: flex;
+  flex-direction: row;
+  gap:30px;
+  margin-top:-6px;
+}
+
+.guess_body_container > .guess_body_holder > .guess_body > .guess_body_arms {
+  position: absolute;
+  top:80px;
+  right:-42px;
+}
+
+.guess_body_container > .guess_body_holder > .guess_body > .guess_body_arms > .guess_body_arm1 {
+  width:80px;
+  height:8px;
+  background-color: black;
+  transform: rotate(30deg);
+  display: none;
+}
+
+.guess_body_container > .guess_body_holder > .guess_body > .guess_body_arms > .guess_body_arm2 {
+  position: absolute;
+  width:80px;
+  height:8px;
+  right:68px;
+  top:2px;
+  background-color: black;
+  transform: rotate(-30deg);
+  display: none;
+}
+
+.guess_body_container > .guess_body_holder > .guess_body > .guess_body_legs >.guess_body_leg1 {
+  position: absolute;
+  right:45px;
+  width:8px;
+  height:80px;
+  background-color: black;
+  transform: rotate(30deg);
+  display: none;
+}
+
+.guess_body_container > .guess_body_holder > .guess_body > .guess_body_legs > .guess_body_leg2 {
+  position: absolute;
+  left:45px;
+  width:8px;
+  height:80px;
+  background-color: black;
+  transform: rotate(150deg);
+  display: none;
+} 
+
+.word_container {
+  display: flex;
+  gap:25px;
+  margin-top:120px;
+}
+
+.word_container > .word {
+  width:50px;
+  font-weight: bold;
+}
+
+.word_container > .word > p {
+  text-align: center;
+  font-family: "monospace";
+  font-size:55px;
+  height:60px;
+}
+
+.word_container > .word > .word_underline {
+  width:100%;
+  background-color: black;
+  height:6px;
+}
+
+.keyboard_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
+  gap:8px;
+  margin-top:20px;
+  width:70%;
+}
+
+.keyboard_container > .btn {
+  width:80px;
+  height:80px;
+  font-size:30px;
+  font-weight: bold;
+  cursor: pointer;
+  border:2px solid black;
+}
+
+.keyboard_container > .checked {
+  background-color: #8865ff;
+  color:white;  
+}
+
+.keyboard_container > .crossed {
+  opacity: 0.5;
+}
+
+#result {
+  font-family: "monospace";
+  font-size:25px;
+}
